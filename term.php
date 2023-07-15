@@ -18,6 +18,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/color.css">
 <link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 	
 	<link rel="stylesheet" type="text/css" href="css/popup.php">
@@ -40,9 +41,10 @@
 					</div><!--con-links end-->
 					<div class="social-links">
 						<ul class="social-lnks">
-							<li><a href="#" title=""><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#" title=""><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#" title=""><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="#" title=""><i class="fa-brands fa-twitter"></i></a></li>
+						<li><a href="#" title=""><i class="fa-brands fa-facebook"></i></a></li>
+						<li><a href="#" title=""><i class="fa-brands fa-instagram"></i></a></li>
+						
 						
 						</ul>
 						
@@ -60,13 +62,15 @@
 						<div class="menu-search">
 							<nav>
 								<ul>
-									<li class="active menu-item-has-children"><a href="index.php" title=""><i class="fa fa-joomla"></i>Home</a>
+									<li class="active menu-item-has-children"><a href="index.php" title=""><i class="fa-solid fa-house"></i>Home</a>
 										
 									</li>
 									
 									<li><a href="about.php" title="">About Us</a></li>
 										<li><a href="term.php" title="">Terms and Condition</a></li>
 									<li><a href="contact.php" title="">Contact Us</a></li>
+									<li><a href="reservation.php" title="">Reservation</a></li>
+
 								</ul>
 		 					</nav><!--nav end-->
 							
@@ -199,10 +203,10 @@
 											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,  sed diam nonummy nibh euismod it tincidunt ut laoreet commodo consequat.  </p>
 										
 											<ul class="sc-links">
-												<li><a href="#" title=""><i class="fa fa-facebook"></i></a></li>
-												<li><a href="#" title=""><i class="fa fa-twitter"></i></a></li>
-												<li><a href="#" title=""><i class="fa fa-google-plus"></i></a></li>
-											
+											<li><a href="#" title=""><i class="fa-brands fa-twitter"></i></a></li>
+											<li><a href="#" title=""><i class="fa-brands fa-facebook"></i></a></li>
+											<li><a href="#" title=""><i class="fa-brands fa-instagram"></i></a></li>
+						
 											</ul>
 										</div><!--about-widget end-->
 									</div><!--widget end-->
