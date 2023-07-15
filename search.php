@@ -1,5 +1,5 @@
 <?php
-include("connection/connect.php");
+include("reservation.php");
 $type=$_GET['type'];
 
 
@@ -18,6 +18,7 @@ $type=$_GET['type'];
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/color.css">
 <link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -36,10 +37,9 @@ $type=$_GET['type'];
 					</div><!--con-links end-->
 					<div class="social-links">
 						<ul class="social-lnks">
-							<li><a href="#" title=""><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#" title=""><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#" title=""><i class="fa fa-google-plus"></i></a></li>
-						
+							<li><a href="#" title=""><i class="fa-brands fa-twitter"></i></a></li>
+							<li><a href="#" title=""><i class="fa-brands fa-facebook"></i></a></li>
+							<li><a href="#" title=""><i class="fa-brands fa-instagram"></i></a></li>
 						</ul>
 						
 					</div><!--socail-links end-->
@@ -56,13 +56,14 @@ $type=$_GET['type'];
 						<div class="menu-search">
 							<nav>
 								<ul>
-									<li class="active menu-item-has-children"><a href="index.php" title=""><i class="fa fa-joomla"></i>Home</a>
+									<li class="active menu-item-has-children"><a href="index.php" title=""><i class="fa-solid fa-house"></i>Home</a>
 										
 									</li>
 									
 									<li><a href="about.php" title="">About Us</a></li>
 										<li><a href="term.php" title="">Terms and Condition</a></li>
 									<li><a href="contact.php" title="">Contact Us</a></li>
+									<li><a href="reservation.php" title="">Reservation</a></li>
 								</ul>
 		 					</nav><!--nav end-->
 							
@@ -107,45 +108,45 @@ $type=$_GET['type'];
 	
 	
 
-					$mql = "SELECT * FROM booking where rtype='$type'";
+		// 			$mql = "SELECT * FROM booking where rtype='$type'";
 					
-					$res= mysqli_query($db, $mql);
-		while($row = mysqli_fetch_array($res))
-				{  
-			            $r_id =  $row['r_id'];
-						$rimage =  $row['rimage'];
-						$rtype =  $row['rtype'];
-				        $rprice =  $row['rprice'];
-						$rtext =  $row['rtext'];
+		// 			$res= mysqli_query($db, $mql);
+		// while($row = mysqli_fetch_array($res))
+		// 		{  
+		// 	            $r_id =  $row['r_id'];
+		// 				$rimage =  $row['rimage'];
+		// 				$rtype =  $row['rtype'];
+		// 		        $rprice =  $row['rprice'];
+		// 				$rtext =  $row['rtext'];
 						
 					
 					
-				echo '<div class="col-md-3">';
-							echo 		'<div class="room-list-view">';
-							echo 			'<figure>';
-							echo 			"	<img src='admin/upload/".$rimage." '>";
-							echo 			'</figure>';
-								echo 		'<div class="room-info style2 style3">';
-								echo 			"<h3>".$rtype."</h3>";
-								echo 			"<p>".$rtext."</p>";
-								echo 			'<ul class="feature-dt">';
+		// 		echo '<div class="col-md-3">';
+		// 					echo 		'<div class="room-list-view">';
+		// 					echo 			'<figure>';
+		// 					echo 			"	<img src='admin/upload/".$rimage." '>";
+		// 					echo 			'</figure>';
+		// 						echo 		'<div class="room-info style2 style3">';
+		// 						echo 			"<h3>".$rtype."</h3>";
+		// 						echo 			"<p>".$rtext."</p>";
+		// 						echo 			'<ul class="feature-dt">';
 								
-								echo 			'</ul>';
-							echo 				'<div class="room-price">';
-								echo 				"<h5>₱ ".$rprice."</h5>";
-							echo 					'<span>Per Night</span>';
-							echo 				'</div>';
-							echo 				'<a href=booking.php?book='.$r_id.'  class="booking3">Book Now</a>';
-							echo 			'</div>';
-							echo 		'</div>';
-							echo 	'</div>';
+		// 						echo 			'</ul>';
+		// 					echo 				'<div class="room-price">';
+		// 						echo 				"<h5>₱ ".$rprice."</h5>";
+		// 					echo 					'<span>Per Night</span>';
+		// 					echo 				'</div>';
+		// 					echo 				'<a href=booking.php?book='.$r_id.'  class="booking3">Book Now</a>';
+		// 					echo 			'</div>';
+		// 					echo 		'</div>';
+		// 					echo 	'</div>';
 	  
 	
 	
 					
 			
 	
-				}
+		// 		}
 					  
 					 
 				
@@ -154,7 +155,7 @@ $type=$_GET['type'];
 	
     
 
-?>				
+// ?>				
 
 
 
@@ -203,10 +204,9 @@ $type=$_GET['type'];
 											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,  sed diam nonummy nibh euismod it tincidunt ut laoreet commodo consequat.  </p>
 										
 											<ul class="sc-links">
-												<li><a href="#" title=""><i class="fa fa-facebook"></i></a></li>
-												<li><a href="#" title=""><i class="fa fa-twitter"></i></a></li>
-												<li><a href="#" title=""><i class="fa fa-google-plus"></i></a></li>
-											
+											<li><a href="#" title=""><i class="fa-brands fa-twitter"></i></a></li>
+											<li><a href="#" title=""><i class="fa-brands fa-facebook"></i></a></li>
+											<li><a href="#" title=""><i class="fa-brands fa-instagram"></i></a></li>
 											</ul>
 										</div><!--about-widget end-->
 									</div><!--widget end-->
